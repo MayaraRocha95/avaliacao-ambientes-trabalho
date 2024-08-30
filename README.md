@@ -1,73 +1,67 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# API de Avaliação de Ambientes de Trabalho
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descrição
+Esta API permite que mulheres avaliem e compartilhem suas experiências em diferentes ambientes de trabalho, ajudando outras mulheres a encontrar locais mais inclusivos e acolhedores. As avaliações podem ser feitas de forma anônima ou identificada, e incluem classificações em várias categorias, como oportunidades de carreira, remuneração e benefícios, cultura e valores, entre outras.
 
-## Description
+## Tecnologias Usadas
+- **Node.js**
+- **NestJS**
+- **TypeORM**
+- **PostgreSQL**
+- **SQLite (para testes)**
+- **class-validator** (para validações)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Funcionalidades
+- **Cadastro de Avaliações**: Permite criar avaliações com informações sobre a empresa, cargo, nível, e uma classificação detalhada em várias categorias.
+- **Listagem de Avaliações**: Recupera todas as avaliações cadastradas na base de dados.
+- **Pesquisa por Empresa**: Filtra avaliações com base no nome da empresa.
+- **Remoção de Avaliações**: Permite a remoção de uma avaliação específica por ID, retornando uma mensagem de confirmação.
+- **Validação de Dados**: Garante que as avaliações contenham valores válidos para as classificações (de 1 a 5).
+
+## Como Rodar o Projeto
+
+### 1. Clone o Repositório
+Primeiro, clone o repositório do projeto para a sua máquina local:
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+## Configure o Banco de Dados
 
-## Running the app
+####  Configure o Banco de Dados Se você estiver utilizando PostgreSQL para rodar o projeto em produção: 
+* Crie um banco de dados no PostgreSQL.
+ * Configure as credenciais de conexão no arquivo `app.module.ts` ou em um arquivo `.env` (se houver suporte).
 
-```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
+ #### Para rodar o projeto em ambiente de testes, utilizando SQLite em memória:
+ * Não são necessárias configurações adicionais, o projeto já está preparado para utilizar SQLite em memória.
 
-# production mode
-$ npm run start:prod
+ ## Execute o Projeto
+
+#### Rode o servidor NestJS:
+
+```
+npm run start:dev
 ```
 
-## Test
+#### O servidor estará rodando em http://localhost:3000.
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+## Teste os Endpoints
 
-# test coverage
-$ npm run test:cov
-```
+   * POST /avaliacoes: Cria uma nova avaliação.
+   * GET /avaliacoes: Retorna todas as avaliações.
+   * GET /avaliacoes/pesquisa?nomeEmpresa=NomeDaEmpresa: Busca avaliações por nome da empresa.
+   * DELETE /avaliacoes/
+   * Remove uma avaliação pelo ID.
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+ #####  Projeto Criado por Mayara Rocha 💜
