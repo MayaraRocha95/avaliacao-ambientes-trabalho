@@ -24,7 +24,7 @@ Esta API permite que mulheres avaliem e compartilhem suas experiências em difer
 ### 1. Clone o Repositório
 Primeiro, clone o repositório do projeto para a sua máquina local:
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone git@github.com:MayaraRocha95/avaliacao-ambientes-trabalho.git
 ```
 
 ## Installation
@@ -58,6 +58,8 @@ npm run start:dev
    * POST /avaliacoes: Cria uma nova avaliação.
    * GET /avaliacoes: Retorna todas as avaliações.
    * GET /avaliacoes/pesquisa?nomeEmpresa=NomeDaEmpresa: Busca avaliações por nome da empresa.
+    ![Avaliações](./assets/pesquisa.png)
+
    * DELETE /avaliacoes/
    * Remove uma avaliação pelo ID.
 
