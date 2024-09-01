@@ -64,6 +64,20 @@ npm run start:dev
    * Remove uma avaliação pelo ID.
 
 
+## Deploy do Projeto
+
+O backend do projeto foi inicialmente implantado no [Railway](https://railway.app/), uma plataforma que facilita a implantação de aplicações Node.js e fornece suporte integrado para banco de dados PostgreSQL. Após a configuração e deploy no Railway, a API foi também implantada na [Vercel](https://vercel.com/), que permite a execução de APIs serverless.
+
+### Como o Deploy foi Realizado
+
+1. **Deploy no Railway**: O projeto foi primeiro configurado e implantado no Railway, que cuidou da configuração do ambiente e do banco de dados PostgreSQL. O Railway gerencia o servidor Node.js onde a API está rodando e fornece uma URL pública para acesso.
+
+2. **Deploy na Vercel**: Em seguida, a mesma API foi implantada na Vercel, aproveitando as funcionalidades de serverless oferecidas pela plataforma. A Vercel facilita a implantação de APIs, permitindo que elas sejam acessadas de forma rápida e escalável. A Vercel foi configurada para apontar para o código-fonte da API, e o deploy foi realizado diretamente a partir do repositório.
+
+### Demonstração
+
+Você pode acessar uma demonstração da API em funcionamento clicando [**aqui**](https://avaliacao-ambientes-trabalho.vercel.app/avaliacoes).
+
 
 
  #####  Projeto Criado por Mayara Rocha 💜
