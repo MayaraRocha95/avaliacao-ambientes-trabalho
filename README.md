@@ -1,4 +1,3 @@
-
 # API de Avaliação de Ambientes de Trabalho
 
 ## Descrição
